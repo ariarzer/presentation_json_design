@@ -102,7 +102,8 @@ a.vk_link {
     hsl(180, 100%, 50%),
     hsl(225, 100%, 50%),
     hsl(270, 100%, 50%),
-    hsl(315, 100%, 50%)
+    hsl(315, 100%, 50%),
+    hsl(0, 100%, 50%)
     );
 }
 
@@ -115,7 +116,8 @@ a.vk_link {
     hsl(180, 100%, 50%),
     hsl(225, 100%, 50%),
     hsl(270, 100%, 50%),
-    hsl(315, 100%, 50%)
+    hsl(315, 100%, 50%),
+    hsl(0, 100%, 50%)
     );
     height: 100px;
     width: 100px;
@@ -192,5 +194,15 @@ a.vk_link {
 
 .hover_animation_example button:nth-of-type(2) {
     background-color: hsl(200, 100%, 50%);
+}
+
+.color_small_example code:after {
+    background-color: var(--c);
+    vertical-align: middle;
+    margin-left: 10px;
+    height: 1em;
+    width: 1em;
+    content: "";
+    display: inline-block;
 }
 
