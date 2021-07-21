@@ -1,0 +1,196 @@
+.vk_button {
+    background-color: #71aaeb;
+    padding: 7px 16px 6px 16px;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+a.vk_link {
+     color: #71aaeb;
+}
+
+.vk_counter {
+    border-radius: 20px;
+    background-color: #71aaeb;
+    padding: 4px 15px;
+    color: black;
+    display: inline;
+}
+
+.pseudo_table tr:not(:last-of-type) td {
+    background-image: none;
+}
+
+.pseudo_table tr {
+    height: 50px;
+}
+
+.pseudo_table td {
+    vertical-align: center;
+}
+
+.pseudo_table.vk .vk_button{
+    color: white;
+}
+
+.palette div {
+    height: 20px;
+    width: 100px;
+
+}
+
+.palette div:nth-child(1)  {background-color: hsl( var(--color), 100%,  10%);}
+.palette div:nth-child(2)  {background-color: hsl( var(--color), 100%,  20%);}
+.palette div:nth-child(3)  {background-color: hsl( var(--color), 100%,  30%);}
+.palette div:nth-child(4)  {background-color: hsl( var(--color), 100%,  40%);}
+.palette div:nth-child(5)  {background-color: hsl( var(--color), 100%,  50%);}
+.palette div:nth-child(6)  {background-color: hsl( var(--color), 100%,  60%);}
+.palette div:nth-child(7)  {background-color: hsl( var(--color), 100%,  70%);}
+.palette div:nth-child(8)  {background-color: hsl( var(--color), 100%,  80%);}
+.palette div:nth-child(9)  {background-color: hsl( var(--color), 100%,  90%);}
+.palette div:nth-child(10) {background-color: hsl( var(--color), 100%, 100%);}
+
+.full_image {
+    position: absolute; top: 0%; left: 50%; height: 100%;
+    transform: translateX(-50%);
+}
+
+.color_example {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    height: 1em;
+    line-height: 1;
+}
+
+
+.hsl_hue,
+.hsl_saturation,
+.hsl_lightness {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    margin-top: 2em ;
+}
+
+.hsl_hue:after,
+.hsl_hue:before,
+.hsl_saturation:after,
+.hsl_saturation:before,
+.hsl_lightness:after,
+.hsl_lightness:before {
+    display: block;
+    position: absolute;
+    top: -2em;
+}
+
+.hsl_hue:before,
+.hsl_saturation:before,
+.hsl_lightness:before {
+    right: 0;
+}
+
+.hsl_hue {
+    background-image: linear-gradient(to right,
+    hsl(0, 100%, 50%),
+    hsl(45, 100%, 50%),
+    hsl(90, 100%, 50%),
+    hsl(135, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(225, 100%, 50%),
+    hsl(270, 100%, 50%),
+    hsl(315, 100%, 50%)
+    );
+}
+
+.hsl_round {
+    background-image: conic-gradient(
+    hsl(0, 100%, 50%),
+    hsl(45, 100%, 50%),
+    hsl(90, 100%, 50%),
+    hsl(135, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(225, 100%, 50%),
+    hsl(270, 100%, 50%),
+    hsl(315, 100%, 50%)
+    );
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.hsl_hue:after {
+    content: '0';
+}
+.hsl_hue:before {
+    content: '360';
+}
+
+.hsl_saturation {
+    background-image: linear-gradient(to right,
+    hsl(0, 0%, 50%),
+    hsl(0, 10%, 50%),
+    hsl(0, 20%, 50%),
+    hsl(0, 30%, 50%),
+    hsl(0, 40%, 50%),
+    hsl(0, 50%, 50%),
+    hsl(0, 60%, 50%),
+    hsl(0, 70%, 50%),
+    hsl(0, 80%, 50%),
+    hsl(0, 90%, 50%),
+    hsl(0, 100%, 50%)
+    );
+}
+
+.hsl_saturation:after {
+    content: '0%';
+}
+.hsl_saturation:before {
+    content: '100%';
+}
+
+.hsl_lightness {
+    background-image: linear-gradient(to right,
+    hsl(0, 100%, 0%),
+    hsl(0, 100%, 10%),
+    hsl(0, 100%, 20%),
+    hsl(0, 100%, 30%),
+    hsl(0, 100%, 40%),
+    hsl(0, 100%, 50%),
+    hsl(0, 100%, 60%),
+    hsl(0, 100%, 70%),
+    hsl(0, 100%, 80%),
+    hsl(0, 100%, 90%),
+    hsl(0, 100%, 100%)
+    );
+}
+
+.hsl_lightness:after {
+    content: '0%';
+}
+.hsl_lightness:before {
+    content: '100%';
+}
+
+.hover_animation_example button {
+    border: none;
+    padding: 10px 15px;
+    font-size: inherit;
+    border-radius: 5px;
+}
+.hover_animation_example span {
+    margin: 0 20px;
+}
+
+.hover_animation_example button:nth-of-type(1) {
+    background-color: hsl(200, 100%, 40%);
+}
+
+
+.hover_animation_example button:nth-of-type(2) {
+    background-color: hsl(200, 100%, 50%);
+}
+

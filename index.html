@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="./global_style.css">
+    <link rel="stylesheet" href="./local_style.css">
+    <link rel="stylesheet" href="./my_theme.css">
+    <link rel="stylesheet" href="./for_this.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+<header class="caption">
+    <h1>Дизайн-система на json</h1>
+    <p>София Валитова, ВКонтакте</p>
+</header>
+
+<section class="slide" id="head">
+    <h2 class="shout shrink">Дизайн-система на json</h2>
+    <style>
+        .slide#head::after {
+            visibility: hidden;
+        }
+    </style>
+</section>
+
+<section class="slide">
+    <h2>Привет!</h2>
+    <div class="columns two">
+        <div style="background-image: url(./assets/avatar.jpg); height: 300px; width: 330px;background-size: 150%; background-position: -85px -17px"></div>
+        <div>
+            <h3 class="next" style="margin-top: 0">Откуда вы можете меня знать?</h3>
+            <p class="next">Я называю себя CSS-инжереном.</p>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <img src="./assets/blog.jpeg" alt="" class="full_image" style="width: 100%;height: auto;z-index: -1;opacity: 60%;">
+    <h2 style="position: relative;left: 400px"><a href="ariarzer.dev">ariarzer.dev</a></h2>
+</section>
+
+<section class="slide">
+    <h2>Предыстория 1</h2>
+    <p>Присылают вам макет, а там...</p>
+    <div class="columns two  next">
+        <div>
+            <div><span class="color_example" style="background-color: #5181b8">#5181b8</span></div>
+            <div><span class="color_example" style="background-color: #5281b9">#5281b9</span></div>
+            <div><span class="color_example" style="background-color: #5182b8">#5182b8</span></div>
+            <div><span class="color_example" style="background-color: #5080b8">#5080b8</span></div>
+        </div>
+        <ul class="next">
+            <li>Какой из них правильный???</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Предыстория 2</h2>
+    <p>Год назад мы поменяли брендовый цвет.</p>
+    <span class="color_example" style="background-color: #5181b8">#5181b8</span> -> <span class="color_example" style="background-color: #2787F5">#2787F5</span>
+</section>
+
+<section class="slide">
+    <h2>Брендовый цвет - акцентный цвет интерфейса</h2>
+    <table class="pseudo_table">
+        <tr>
+            <td>
+                <button class="vk_button">Button</button>
+            </td>
+            <td>
+                <div class="vk_counter">1234</div>
+            </td>
+        </tr>
+        <tr>
+            <td><a href="/" class="vk_link">link</a></td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <svg style="vertical-align: middle" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                         viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.44 4.18C2 5.04 2 6.16 2 8.4v3.2c0 2.24 0 3.36.44 4.22a4 4 0 001.74 1.74c.86.44 1.98.44 4.22.44h3.2c2.24 0 3.36 0 4.22-.44a4 4 0 001.74-1.74c.44-.86.44-1.98.44-4.22V8.4c0-2.24 0-3.36-.44-4.22a4 4 0 00-1.74-1.74C14.96 2 13.84 2 11.6 2H8.4c-2.24 0-3.36 0-4.22.44a4 4 0 00-1.74 1.74zm12.2 3.8a.9.9 0 10-1.28-1.27L8.7 11.38 6.64 9.33a.9.9 0 00-1.28 1.27l2.7 2.69a.9.9 0 001.27 0l5.3-5.3z"
+                              fill="#71aaeb"/>
+                    </svg>
+                </div>
+            </td>
+            <td class="next">Всё первичное, что должно выделяться</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Много оттенков одного цвета</h2>
+    <p>Оказалось что...</p>
+    <table class="pseudo_table">
+        <tr>
+            <td>
+                <button class="vk_button">Button</button>
+            </td>
+            <td><span>#5283b8</span></td>
+        </tr>
+        <tr>
+            <td><a href="/" class="vk_link">link</a></td>
+            <td><span>#5180b9</span></td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <svg style="vertical-align: middle" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                         viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.44 4.18C2 5.04 2 6.16 2 8.4v3.2c0 2.24 0 3.36.44 4.22a4 4 0 001.74 1.74c.86.44 1.98.44 4.22.44h3.2c2.24 0 3.36 0 4.22-.44a4 4 0 001.74-1.74c.44-.86.44-1.98.44-4.22V8.4c0-2.24 0-3.36-.44-4.22a4 4 0 00-1.74-1.74C14.96 2 13.84 2 11.6 2H8.4c-2.24 0-3.36 0-4.22.44a4 4 0 00-1.74 1.74zm12.2 3.8a.9.9 0 10-1.28-1.27L8.7 11.38 6.64 9.33a.9.9 0 00-1.28 1.27l2.7 2.69a.9.9 0 001.27 0l5.3-5.3z"
+                              fill="#71aaeb"/>
+                    </svg>
+                </div>
+            </td>
+            <td><span>#5181b8</span></td>
+        </tr>
+    </table>
+    <p class="next">...всё покрашено в разных местах и в чуть разные синие.</p>
+</section>
+
+
+<section class="slide">
+    <h2>Первая палитра</h2>
+    <p>Очевидное решение: создаём переменную.</p>
+    <table class="pseudo_table">
+        <tr>
+            <td>
+                <button class="vk_button">Button</button>
+            </td>
+            <td><span>var(--blue)</span></td>
+        </tr>
+        <tr>
+            <td><a href="/" class="vk_link">link</a></td>
+            <td><span>var(--blue)</span></td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <svg style="vertical-align: middle" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                         viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.44 4.18C2 5.04 2 6.16 2 8.4v3.2c0 2.24 0 3.36.44 4.22a4 4 0 001.74 1.74c.86.44 1.98.44 4.22.44h3.2c2.24 0 3.36 0 4.22-.44a4 4 0 001.74-1.74c.44-.86.44-1.98.44-4.22V8.4c0-2.24 0-3.36-.44-4.22a4 4 0 00-1.74-1.74C14.96 2 13.84 2 11.6 2H8.4c-2.24 0-3.36 0-4.22.44a4 4 0 00-1.74 1.74zm12.2 3.8a.9.9 0 10-1.28-1.27L8.7 11.38 6.64 9.33a.9.9 0 00-1.28 1.27l2.7 2.69a.9.9 0 001.27 0l5.3-5.3z"
+                              fill="#71aaeb"/>
+                    </svg>
+                </div>
+            </td>
+            <td><span>var(--blue)</span></td>
+        </tr>
+    </table>
+    <p>Обратим внимание на имя переменной</p>
+</section>
+
+<section class="slide">
+    <h2>Проблема нейминга</h2>
+    <p>У нас не один синий, у нас очень много синих</p>
+    <span class="color_example" style="background-color: #4A76A8">#4A76A8</span>
+    <span class="color_example" style="background-color: #4A76A8">#5181B8</span>
+    <span class="color_example" style="background-color: #2A5885">#2A5885</span>
+    <span class="color_example" style="background-color: #224B7A">#224B7A</span>
+    <span class="color_example" style="background-color: #1D3A5C">#1D3A5C</span>
+    <span class="color_example" style="background-color: #5C9CE6">#5C9CE6</span>
+    <p>Получаем много переменных -> нужен хороший нейминг</p>
+</section>
+
+<section class="slide" id="grey_example">
+    <h2>Именованные цвета: как?</h2>
+    <div class="columns two">
+        <div class=" small_code">
+            <pre><code>gray_1: #E6E6E6</code>
+            <code>gray_2: #CCCCCC</code>
+            <code>gray_3: #B2B2B2</code>
+            <code>gray_4: #939393</code>
+            <code>gray_5: #828282</code>
+            <code>gray_6: #656565</code>
+            <code>gray_7: #555555</code>
+            <code>gray_8: #333333</code>
+            <code>gray_9: #222222</code>
+            </pre>
+        </div>
+        <div>
+            <p><b>Серый это...</b></p>
+            <p>одинаковые значение каналов</p>
+            <code>R = G = B</code>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Не RGB - HSL</h2>
+    <p>Три оси - Hue, saturation и lightness</p>
+    <img src="./assets/hsl.jpg" alt="" style="height: 200px">
+    <error>Другая картинка или сверстаю</error>
+</section>
+
+<section class="slide">
+    <h2>Hue</h2>
+    <p>Тон цвета, представленный в виде угла цветового круга.</p>
+    <div class="hsl_round"></div>
+    <div class="hsl_hue"></div>
+</section>
+
+<section class="slide">
+    <h2>Saturation</h2>
+    <p>Насыщенность цвета</p>
+    <div class="hsl_saturation"></div>
+</section>
+
+<section class="slide">
+    <h2>Lightness</h2>
+    <p>"Светлота" цвета</p>
+    <div class="hsl_lightness"></div>
+</section>
+
+<section class="slide">
+    <h2>HSL</h2>
+    <pre><code>/*</code>
+<code>* @param {&lt;number> | &lt;angle>} --hue Оттенок</code>
+<code>* @param {&lt;percentage>} --saturation Насыщенность</code>
+<code>* @param {&lt;percentage>} --lightness Яркость</code>
+<code>*/</code>
+<code>color: hsl (var(--hue) var(--saturation) var(--lightness));</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Именованные цвета: как?</h2>
+    <div class="columns two">
+            <pre class="small_code"><code>gray_1: hsl(0, 0%, 90%)</code>
+            <code>gray_2: hsl(0, 0%, 80%)</code>
+            <code>gray_3: hsl(0, 0%, 70%)</code>
+            <code>gray_4: hsl(0, 0%, 60%)</code>
+            <code>gray_5: hsl(0, 0%, 50%)</code>
+            <code>gray_6: hsl(0, 0%, 40%)</code>
+            <code>gray_7: hsl(0, 0%, 30%)</code>
+            <code>gray_8: hsl(0, 0%, 20%)</code>
+            <code>gray_9: hsl(0, 0%, 10%)</code>
+            </pre>
+        <div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="slide">
+    <h2>Именованные цвета: как?</h2>
+    <div class="columns two">
+            <pre class="small_code"><code>gray_100: hsl(0, 0%, 90%)</code>
+            <code>gray_200: hsl(0, 0%, 80%)</code>
+            <code>gray_300: hsl(0, 0%, 70%)</code>
+            <code>gray_400: hsl(0, 0%, 60%)</code>
+            <code>gray_500: hsl(0, 0%, 50%)</code>
+            <code>gray_600: hsl(0, 0%, 40%)</code>
+            <code>gray_700: hsl(0, 0%, 30%)</code>
+            <code>gray_800: hsl(0, 0%, 20%)</code>
+            <code>gray_900: hsl(0, 0%, 10%)</code>
+            </pre>
+        <div>
+            <ul>
+                <li>Берем базовый цвет</li>
+                <li>Делаем итерацию по светлоте</li>
+                <li>Именуем обратно светлоте</li>
+            </ul>
+            <error>квардатики с цветами</error>
+        </div>
+
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Классическое постриение цветовых схем</h2>
+    <div class="columns four" style="margin-bottom: 20px">
+        <div class="palette" style="--color: 123">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="palette" style="--color: 200">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="palette" style="--color: 1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="palette" style="--color: 300">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <p>Подобных инструментов много, например <a href="https://colorbox.io/">colorbox.io</a></p>
+</section>
+
+<section class="slide">
+    <h2>Прозрачность</h2>
+    <p>В палитра  есть цвета с прозрачностью.</p>
+    <p>Именует их как <code>*_alpha{alpha_value}</code></p>
+    <pre class="small_code"><code>gray_800: #333333</code>
+    <code>gray_800_alpha72: "#333333B8"</code>
+    <code>gray_900: "#222222"</code>
+    <code>gray_900_alpha16: #22222229</code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Именованные цвета: зачем?</h2>
+    <h3 class="">1. Контроль количества цветов</h3>
+    <p>Линтер <a href="https://github.com/AndyOGo/stylelint-declaration-strict-value/">declaration-strict-value </a>для запрета использование не
+        переменных в правилах.</p>
+</section>
+
+<section class="slide">
+    <img src="./assets/plugin.png" alt="" style="position: absolute; top: 0%; left: 0%; height: 100%">
+</section>
+
+<section class="slide">
+    <h2>Именованные цвета: зачем?</h2>
+    <pre class="small_code">// stylelint.config.js
+<code>'scale-unlimited/declaration-strict-value': [[
+      '/color/',
+      'fill',
+      'stroke',
+    ], {
+      ignoreKeywords: ['currentColor', 'transparent', 'inherit', 'unset' ],
+    }],
+            </code>
+        </pre>
+</section>
+
+<section class="slide">
+    <h2>Именованные цвета: зачем?</h2>
+    <h3>2. Удобно для дизайнеров</h3>
+    <p>Мы именуем переменные, чтобы знать, что в них лежит.</p>
+    <p>Дизанерам тоже удобнее работать не с голыми хексами.</p>
+</section>
+
+<section class="slide">
+    <h2>Именованные цвета: зачем?</h2>
+    <h3>3. Алгоритмическая логика состояний</h3>
+    <p>При ховере поднимать lightness на 10% (например)</p>
+    <div class="hover_animation_example">
+        <button>hsl(200, 100%, 40%)</button>
+        <span>-> :hover -></span>
+        <button>hsl(200, 100%, 50%)</button>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Вторая палитра</h2>
+    <table class="pseudo_table">
+        <tr>
+            <td>
+                <button class="vk_button">Button</button>
+            </td>
+            <td><span>var(--blue_400)</span></td>
+            <td><span>это кнопка</span></td>
+        </tr>
+        <tr>
+            <td><a href="/" class="vk_link">link</a></td>
+            <td><span>var(--blue_400)</span></td>
+            <td><span>это ссылка</span></td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <svg style="vertical-align: middle" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                         viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.44 4.18C2 5.04 2 6.16 2 8.4v3.2c0 2.24 0 3.36.44 4.22a4 4 0 001.74 1.74c.86.44 1.98.44 4.22.44h3.2c2.24 0 3.36 0 4.22-.44a4 4 0 001.74-1.74c.44-.86.44-1.98.44-4.22V8.4c0-2.24 0-3.36-.44-4.22a4 4 0 00-1.74-1.74C14.96 2 13.84 2 11.6 2H8.4c-2.24 0-3.36 0-4.22.44a4 4 0 00-1.74 1.74zm12.2 3.8a.9.9 0 10-1.28-1.27L8.7 11.38 6.64 9.33a.9.9 0 00-1.28 1.27l2.7 2.69a.9.9 0 001.27 0l5.3-5.3z"
+                              fill="#71aaeb"/>
+                    </svg>
+                </div>
+            </td>
+            <td><span>var(--blue_400)</span></td>
+            <td><span>это чекбокс</span></td>
+        </tr>
+    </table>
+    <p>Все ссылаются на один и тот же синий <br/>-> если мы его поменяем, поменяется везде.</p>
+</section>
+
+<section class="slide">
+    <h2>Вторая палитра</h2>
+    <p>Создаем дополнительный слой абстракции.</p>
+    <table class="pseudo_table">
+        <tr>
+            <td>
+                <button class="vk_button">Button</button>
+            </td>
+            <td><span>--button_bg</span></td>
+            <td><span>var(--blue_400)</span></td>
+        </tr>
+        <tr>
+            <td><a href="/" class="vk_link">link</a></td>
+            <td><span>--link_fg</span></td>
+            <td><span>var(--blue_400)</span></td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <svg style="vertical-align: middle" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                         viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.44 4.18C2 5.04 2 6.16 2 8.4v3.2c0 2.24 0 3.36.44 4.22a4 4 0 001.74 1.74c.86.44 1.98.44 4.22.44h3.2c2.24 0 3.36 0 4.22-.44a4 4 0 001.74-1.74c.44-.86.44-1.98.44-4.22V8.4c0-2.24 0-3.36-.44-4.22a4 4 0 00-1.74-1.74C14.96 2 13.84 2 11.6 2H8.4c-2.24 0-3.36 0-4.22.44a4 4 0 00-1.74 1.74zm12.2 3.8a.9.9 0 10-1.28-1.27L8.7 11.38 6.64 9.33a.9.9 0 00-1.28 1.27l2.7 2.69a.9.9 0 001.27 0l5.3-5.3z"
+                              fill="#71aaeb"/>
+                    </svg>
+                </div>
+            </td>
+            <td><span>--control_bg</span></td>
+            <td><span>var(--blue_400)</span></td>
+        </tr>
+    </table>
+    <p>Теперь можем менять каждый по отдельности.</p>
+</section>
+
+<section class="slide">
+    <h2>Вторая палитра</h2>
+    <p>Создаем дополнительный слой абстракции.</p>
+    <table class="pseudo_table">
+        <tr>
+            <td>
+                <button class="vk_button" style="background-color: hsl(100, 100%, 50%)">Button</button>
+            </td>
+            <td><span>--button_bg</span></td>
+            <td><span>var(--light_green_50)</span></td>
+        </tr>
+        <tr>
+            <td><a href="/" class="vk_link">link</a></td>
+            <td><span>--link_fg</span></td>
+            <td><span>var(--blue_400)</span></td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <svg style="vertical-align: middle" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                         viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M2.44 4.18C2 5.04 2 6.16 2 8.4v3.2c0 2.24 0 3.36.44 4.22a4 4 0 001.74 1.74c.86.44 1.98.44 4.22.44h3.2c2.24 0 3.36 0 4.22-.44a4 4 0 001.74-1.74c.44-.86.44-1.98.44-4.22V8.4c0-2.24 0-3.36-.44-4.22a4 4 0 00-1.74-1.74C14.96 2 13.84 2 11.6 2H8.4c-2.24 0-3.36 0-4.22.44a4 4 0 00-1.74 1.74zm12.2 3.8a.9.9 0 10-1.28-1.27L8.7 11.38 6.64 9.33a.9.9 0 00-1.28 1.27l2.7 2.69a.9.9 0 001.27 0l5.3-5.3z"
+                              fill="#71aaeb"/>
+                    </svg>
+                </div>
+            </td>
+            <td><span>--control_bg</span></td>
+            <td><span>var(--blue_400)</span></td>
+        </tr>
+    </table>
+    <p>Теперь можем менять каждый по отдельности.</p>
+</section>
+
+<section class="slide">
+    <h2>Две палитры - два уровня определения</h2>
+    <div class="columns two">
+        <div>
+            <p>Палитра (именованные цвета)</p>
+            <pre class="small_code"><code>/* palette.css */</code>
+                <code> </code>
+                <code>--blue_400: #5181B8</code>
+                <code>--black: #000000</code>
+                <code>--green_350: #4BB34B</code>
+            </pre>
+        </div>
+        <div>
+            <p>Схема (семантические токены)</p>
+            <pre class="small_code"><code>/* scheme.css */</code>
+                <code> </code>
+                <code>--button_bg: hsl(--blue_400)</code>
+                <code>--control_bg: hsl(--blue_400)</code>
+                <code>--link_fg: var(--blue_400)</code>
+                <code>--text_primary: var(--black)</code>
+                <code>--text_positive: var(--green_350)</code>
+            </pre>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Две палитры</h2>
+    <p>Можно перекрашивать один и тот же код под разные сервисы.</p>
+
+    <table class="pseudo_table vk">
+        <tr>
+            <td>
+                <svg fill="none" height="48" width="274" viewBox=" 0 0 274 48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 23C0 12.158 0 6.737 3.368 3.368S12.158 0 23 0h2c10.842 0 16.264 0 19.632 3.368C48 6.737 48 12.158 48 23v2c0 10.842 0 16.264-3.368 19.632C41.263 48 35.842 48 25 48h-2c-10.842 0-16.263 0-19.632-3.368C0 41.263 0 35.842 0 25z"
+                          fill="#2787F5"></path>
+                    <path clip-rule="evenodd"
+                          d="M13 15H9.5c-1 0-1.2.47-1.2.99 0 .927 1.186 5.525 5.525 11.606C16.717 31.749 20.792 34 24.5 34c2.225 0 2.5-.5 2.5-1.361V29.5c0-1 .21-1.2.915-1.2.52 0 1.41.26 3.486 2.262C33.774 32.935 34.165 34 35.5 34H39c1 0 1.5-.5 1.211-1.487-.315-.983-1.448-2.41-2.952-4.101-.816-.964-2.04-2.003-2.41-2.522-.52-.667-.37-.964 0-1.557 0 0 4.264-6.007 4.71-8.046.222-.742 0-1.287-1.06-1.287H35c-.89 0-1.3.47-1.522.99 0 0-1.78 4.338-4.301 7.156-.816.816-1.187 1.076-1.632 1.076-.222 0-.544-.26-.544-1.001v-6.934c0-.89-.259-1.287-1-1.287h-5.5c-.556 0-.89.413-.89.805 0 .843 1.26 1.038 1.39 3.41v5.155c0 1.13-.204 1.335-.65 1.335-1.186 0-4.072-4.358-5.784-9.344C14.231 15.39 13.894 15 13 15z"
+                          fill="#FFFFFF" fill-rule="evenodd"></path>
+                    <g fill="#fff">
+                        <path d="M81.893 23.58c1.903-.89 3.13-2.37 3.13-4.654 0-3.468-3.172-5.922-7.74-5.922H66.75V35h10.997c4.738 0 8.038-2.58 8.038-6.091 0-2.665-1.735-4.653-3.892-5.33zm-10.279-6.557h5.668c1.692 0 2.877 1.015 2.877 2.41s-1.185 2.37-2.877 2.37h-5.668zm6.133 13.959h-6.133V25.61h6.133c1.904 0 3.173 1.1 3.173 2.707s-1.269 2.665-3.172 2.665zM103.877 35h6.387l-10.11-11.42 9.264-10.576h-5.795l-7.36 8.545h-1.185v-8.545h-4.864V35h4.864v-8.756h1.185zm18.803.423c6.895 0 11.76-4.738 11.76-11.42s-4.865-11.422-11.76-11.422-11.759 4.738-11.759 11.421 4.864 11.421 11.759 11.421zm0-4.441c-3.976 0-6.683-2.834-6.683-6.98s2.707-6.98 6.683-6.98c3.977 0 6.684 2.835 6.684 6.98s-2.707 6.98-6.684 6.98zm30.709-17.978v8.672h-9.856v-8.672h-4.864V35h4.864v-8.883h9.856V35h4.865V13.004zM169.241 35h4.865V17.446h7.614v-4.442h-20.093v4.442h7.614zm23.999-22.419c-4.272 0-8.037 2.2-9.137 6.007l4.484.761c.677-1.354 2.2-2.623 4.399-2.623 2.665 0 4.23 1.904 4.442 4.78h-4.738c-6.472 0-9.687 2.834-9.687 6.895 0 4.103 3.173 7.022 7.657 7.022 3.595 0 6.006-2.073 7.064-3.892l1.015 3.47h3.596V22.647c0-6.387-3.469-10.067-9.095-10.067zm-1.438 18.739c-2.369 0-3.892-1.227-3.892-3.13 0-1.692 1.227-2.877 4.949-2.877h4.611c0 3.596-2.284 6.007-5.668 6.007zM221.275 35h6.387l-10.11-11.42 9.264-10.576h-5.795l-7.36 8.545h-1.185v-8.545h-4.864V35h4.864v-8.756h1.185zm14.638 0h4.865V17.446h7.614v-4.442h-20.093v4.442h7.614zm36.605-11.252c0-6.345-4.738-11.167-11.421-11.167-6.684 0-11.421 4.78-11.421 11.421s4.737 11.421 11.421 11.421c4.568 0 8.883-2.157 10.532-6.345l-4.568-.761c-1.058 1.565-3.088 2.665-5.668 2.665-3.723 0-6.176-2.285-6.641-5.669h17.681c.042-.465.085-.972.085-1.565zm-11.421-6.937c3.045 0 5.329 1.946 6.133 4.695h-12.182c.803-2.834 3.088-4.695 6.049-4.695z"></path>
+                    </g>
+                </svg>
+            </td>
+            <td><button class="vk_button" style="background-color: #2787F5">button</button></td>
+        </tr>
+        <tr>
+            <td>
+                <svg fill="none" height="48" width="356" viewBox="0 0 356 48" xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd"
+                          d="M31.32 0H16.56C3.24 0 0 3.24 0 16.68v14.76C0 44.76 3.24 48 16.68 48h14.76C44.88 48 48 44.76 48 31.32V16.56C48 3.12 44.76 0 31.32 0z"
+                          fill="#f66" fill-rule="evenodd"></path>
+                    <path d="M35.12 13.972a14.182 14.182 0 1 0 0 20.056L25.09 24z" fill="#fff"></path>
+                    <g fill="#fff">
+                        <path d="M87.646 24.087c0-6.514-4.569-11.21-10.998-11.21-6.388 0-10.956 4.695-10.956 11.252 0 6.599 4.61 11.294 11.167 11.294 4.272 0 8.206-2.03 10.025-6.007l-3.172-.507c-1.1 1.946-3.554 3.384-6.684 3.384-4.357 0-7.402-2.834-7.783-7.149h18.358c.043-.507.043-.677.043-1.057zm-10.998-8.164c3.849 0 6.64 2.538 7.318 6.303H69.371c.72-3.807 3.51-6.303 7.276-6.303zm12.07 25.507H92.1V35h17.047v6.43h3.384v-9.56h-3.638V13.3h-14.72l-1.015 11.548c-.466 5.16-1.65 7.022-4.061 7.022h-.38zm5.752-9.56c1.1-1.058 1.734-3.088 2.073-6.937l.761-8.545h8.206V31.87zm29.648-18.993c-3.807 0-7.107 1.988-8.333 5.288l3.172.507c.973-1.776 2.834-2.876 5.034-2.876 3.003 0 4.949 2.073 5.16 6.049h-5.076c-6.218 0-9.432 2.75-9.432 6.768s3.087 6.81 7.487 6.81c3.764 0 5.922-1.946 7.191-3.85l.93 3.427h2.284V22.86c0-6.472-3.299-9.983-8.417-9.983zm-1.354 19.627c-2.834 0-4.695-1.522-4.695-3.976 0-2.284 1.65-3.765 6.049-3.765h5.033v.55c0 4.823-2.791 7.191-6.387 7.191zm40.589-8.925c1.904-.888 3.131-2.369 3.131-4.653 0-3.468-3.173-5.922-7.741-5.922H148.21V35h10.998c4.738 0 8.037-2.58 8.037-6.091 0-2.665-1.734-4.653-3.892-5.33zm-10.279-6.556h5.669c1.692 0 2.876 1.015 2.876 2.41s-1.184 2.37-2.876 2.37h-5.669zm6.134 13.959h-6.134V25.61h6.134c1.903 0 3.172 1.1 3.172 2.707s-1.269 2.665-3.172 2.665zM185.336 35h6.387l-10.109-11.42 9.263-10.576h-5.795l-7.36 8.545h-1.184v-8.545h-4.865V35h4.865v-8.756h1.184zm18.804.423c6.895 0 11.759-4.738 11.759-11.42S211.035 12.58 204.14 12.58s-11.76 4.738-11.76 11.421 4.865 11.421 11.76 11.421zm0-4.441c-3.976 0-6.684-2.834-6.684-6.98s2.708-6.98 6.684-6.98 6.683 2.835 6.683 6.98-2.707 6.98-6.683 6.98zm30.709-17.978v8.672h-9.856v-8.672h-4.865V35h4.865v-8.883h9.856V35h4.864V13.004zM250.702 35h4.864V17.446h7.614v-4.442h-20.092v4.442h7.614zM274.7 12.581c-4.272 0-8.037 2.2-9.136 6.007l4.483.761c.677-1.354 2.2-2.623 4.4-2.623 2.665 0 4.23 1.904 4.441 4.78h-4.737c-6.472 0-9.687 2.834-9.687 6.895 0 4.103 3.172 7.022 7.656 7.022 3.596 0 6.007-2.073 7.064-3.892l1.015 3.47h3.596V22.647c0-6.387-3.469-10.067-9.095-10.067zm-1.438 18.739c-2.369 0-3.891-1.227-3.891-3.13 0-1.692 1.226-2.877 4.949-2.877h4.61c0 3.596-2.284 6.007-5.668 6.007zM302.735 35h6.387l-10.109-11.42 9.263-10.576h-5.795l-7.36 8.545h-1.184v-8.545h-4.865V35h4.865v-8.756h1.184zm14.639 0h4.864V17.446h7.614v-4.442H309.76v4.442h7.614zm36.604-11.252c0-6.345-4.738-11.167-11.421-11.167s-11.421 4.78-11.421 11.421 4.738 11.421 11.421 11.421c4.568 0 8.883-2.157 10.533-6.345l-4.569-.761c-1.057 1.565-3.088 2.665-5.668 2.665-3.722 0-6.176-2.285-6.641-5.669h17.681c.043-.465.085-.972.085-1.565zm-11.421-6.937c3.046 0 5.33 1.946 6.133 4.695h-12.182c.804-2.834 3.088-4.695 6.049-4.695z"></path>
+                    </g>
+                </svg>
+            </td>
+            <td><button class="vk_button" style="background-color: #f66">button</button></td>
+        </tr>
+        <tr>
+            <td>
+                <svg fill="none" height="48" width="395" viewBox="0 0 395 48" xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd"
+                          d="M31.32 0H16.56C3.24 0 0 3.24 0 16.68v14.76C0 44.76 3.24 48 16.68 48h14.76C44.88 48 48 44.76 48 31.32V16.56C48 3.12 44.76 0 31.32 0z"
+                          fill="#29cd90" fill-rule="evenodd"></path>
+                    <path d="M10.8 13.714h3.514c3.2 0 3.971.743 3.971 3.943v7.486h-7.457c-3.2 0-3.971-.772-3.971-3.943v-3.514c0-3.2.771-3.972 3.943-3.972zm30.343 3.943v3.514c0 3.2-.743 3.972-3.943 3.972h-7.486v-7.457c0-3.2.772-3.972 3.943-3.972h3.515c3.2 0 3.971.772 3.971 3.943zM25.771 36.571h-3.514c-3.2 0-3.971-.743-3.971-3.943v-7.485h11.428V32.6c0 3.2-.771 3.971-3.942 3.971z"
+                          fill="#fff"></path>
+                    <g fill="#fff">
+                        <path d="M72.376 35h3.384V16.388h7.529V13.3H64.846v3.088h7.53zm22.082-22.123c-3.806 0-7.106 1.988-8.333 5.288l3.173.507c.973-1.776 2.834-2.876 5.034-2.876 3.003 0 4.949 2.073 5.16 6.049h-5.076c-6.218 0-9.433 2.75-9.433 6.768s3.088 6.81 7.487 6.81c3.765 0 5.922-1.946 7.191-3.85l.931 3.427h2.284V22.86c0-6.472-3.3-9.983-8.418-9.983zm-1.353 19.627c-2.834 0-4.695-1.522-4.695-3.976 0-2.284 1.65-3.764 6.049-3.764h5.033v.55c0 4.822-2.792 7.19-6.387 7.19zM121.925 35h4.484l-10.322-11.167 9.476-10.533h-4.104l-8.121 9.095h-1.354V13.3H108.6V35h3.384v-9.39h1.312zm16.732.423c4.442 0 8.502-2.2 10.194-6.43l-3.172-.55c-.973 2.2-3.553 3.85-6.81 3.85-4.653 0-7.826-3.257-7.826-8.164 0-4.865 3.173-8.164 7.826-8.164 3.087 0 5.541 1.523 6.598 3.596l3.215-.55c-1.734-4.019-5.668-6.134-10.025-6.134-6.556 0-11.167 4.695-11.167 11.252 0 6.599 4.611 11.294 11.167 11.294zm14.02-.423h5.245l9.602-18.104h.55V35h3.299V13.3h-5.245l-9.56 18.105h-.592V13.3h-3.299zm49.713-11.42c1.904-.89 3.13-2.37 3.13-4.654 0-3.468-3.172-5.922-7.74-5.922h-10.533V35h10.998c4.737 0 8.037-2.58 8.037-6.091 0-2.665-1.734-4.653-3.892-5.33zm-10.279-6.557h5.669c1.692 0 2.876 1.015 2.876 2.41s-1.184 2.37-2.876 2.37h-5.669zm6.134 13.959h-6.134V25.61h6.134c1.903 0 3.172 1.1 3.172 2.707s-1.269 2.665-3.172 2.665zM224.373 35h6.387l-10.109-11.42 9.263-10.576h-5.795l-7.36 8.545h-1.184v-8.545h-4.865V35h4.865v-8.756h1.184zm18.804.423c6.895 0 11.759-4.738 11.759-11.42s-4.864-11.422-11.759-11.422-11.76 4.738-11.76 11.421 4.865 11.421 11.76 11.421zm0-4.441c-3.976 0-6.684-2.834-6.684-6.98s2.708-6.98 6.684-6.98 6.683 2.835 6.683 6.98-2.707 6.98-6.683 6.98zm30.709-17.978v8.672h-9.856v-8.672h-4.865V35h4.865v-8.883h9.856V35h4.864V13.004zM289.738 35h4.865V17.446h7.614v-4.442h-20.093v4.442h7.614zm23.999-22.419c-4.272 0-8.037 2.2-9.136 6.007l4.483.761c.677-1.354 2.2-2.623 4.4-2.623 2.665 0 4.23 1.904 4.441 4.78h-4.737c-6.472 0-9.687 2.834-9.687 6.895 0 4.103 3.172 7.022 7.656 7.022 3.596 0 6.007-2.073 7.064-3.892l1.015 3.47h3.596V22.647c0-6.387-3.469-10.067-9.095-10.067zm-1.438 18.739c-2.369 0-3.891-1.227-3.891-3.13 0-1.692 1.226-2.877 4.949-2.877h4.61c0 3.596-2.284 6.007-5.668 6.007zM341.772 35h6.387L338.05 23.58l9.263-10.576h-5.795l-7.36 8.545h-1.184v-8.545h-4.865V35h4.865v-8.756h1.184zm14.638 0h4.865V17.446h7.614v-4.442h-20.093v4.442h7.614zm36.605-11.252c0-6.345-4.738-11.167-11.421-11.167-6.684 0-11.421 4.78-11.421 11.421s4.737 11.421 11.421 11.421c4.568 0 8.883-2.157 10.533-6.345l-4.569-.761c-1.057 1.565-3.088 2.665-5.668 2.665-3.722 0-6.176-2.285-6.641-5.669h17.681c.043-.465.085-.972.085-1.565zm-11.421-6.937c3.045 0 5.33 1.946 6.133 4.695h-12.182c.804-2.834 3.088-4.695 6.049-4.695z"></path>
+                    </g>
+                </svg>
+            </td>
+            <td><button class="vk_button" style="background-color: #29cd90">button</button></td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Где и как хранить?</h2>
+    <p>Где хранить пары ключ-значение? Конечно в джсоне!</p>
+    <p>Где хранить джсон, который истользуют опенсорс проекты компании? Конечно на гитхабе!</p>
+    <p>А теперь поподробнее....</p>
+</section>
+
+<section class="slide">
+    <h2>Джсон это просто и удобно</h2>
+    <ul>
+        <li>Старый формат, поэтому хорошо импортить в дргуие языки</li>
+        <li>Очевидный синтаксис: могут писать все (дизайнеры и разработчики со всех платформ)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <img src="./assets/json_palette.jpg" alt="" style="position: absolute; top: 0%; left: 0%; width: 100%;" >
+</section>
+<section class="slide">
+    <img src="./assets/json_scheme.jpg" alt="" style="position: absolute; top: 0%; left: 0%; width: 100%;" >
+</section>
+
+<section class="slide">
+    <h2>Какие линтеры добавили для репозитория</h2>
+    <p>Палитру и схему иногда правят люди, не привыкшие писать код, поэтому:</p>
+    <ul>
+        <li>Проверка синтаксиса json</li>
+        <li>Проверка синтаксиса hex</li>
+        <li>Нельзя использовать в схемах цвета, которых нет в палитре</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Источник правды</h2>
+    <p>Считаем гитхаб первоисточником.</p>
+    <p>Генерируем цвета для всех платформ (и для фигмы тоже) из него.</p>
+    <p>Это сильно повышает контроль дизайнеров над общим видом интерфейса.</p>
+</section>
+
+<section class="slide">
+    <h2>Как генерируем для веба</h2>
+    <pre><code  class="">const palette = require('palette.json');</code>
+            <code  class="">css += ':root {\n';</code>
+            <code class="">Object.keys(palette).forEach((colorName) => {</code>
+    <code class="">   css += `  --${colorName}: ${palette[colorName]};\n`; </code>
+  <code class="">});</code>
+        <code class="">fs.writeFileSync(`css/palette.css`, css);</code>
+            </pre>
+</section>
+
+<section class="slide">
+    <h2>Как генерируем для фигмы</h2>
+    <img src="./assets/figma_2.jpg" alt="" width="400">
+    <img src="./assets/figma.jpg" alt="" width="400">
+</section>
+
+<section class="slide">
+    <h2>Как генерируем для фигмы</h2>
+    <p>Писать плагины для фигмы <a href="https://www.figma.com/plugin-docs/intro/">довольно просто</a>.</p>
+    <img src="assets/install_vs.jpg" alt="" style="width: 100%;">
+    <p>Первый плагин создается через интерфейс.</p>
+</section>
+
+<section class="slide">
+    <img src="./assets/figma_pugin.jpeg" alt="" class="full_image">
+</section>
+
+<section class="slide">
+    <h2>Как генерируем для фигмы</h2>
+    <pre class="small_code">
+            <code>Object.keys(palette).forEach(colorName => {</code>
+            <code>  const style = figma.createPaintStyle();</code>
+            <code>  const [a, r, g, b] = ahex2rgbaArr(msg.palette[colorName]);</code>
+            <code>  const solidPaint = { type: "SOLID",</code>
+            <code>    color: { r: r, g: g, b: b },</code>
+            <code>    opacity: a, };</code>
+            <code>  style.name = `${msg.name}/${colorName}`;</code>
+            <code>  style.paints = [solidPaint];</code>
+        <code>});</code>
+        </pre>
+</section>
+
+<section class="slide">
+    <h2>Типизация</h2>
+    <p>Мы типизировали переменные из палитры.</p>
+    <p class="next">Зачем?...</p>
+</section>
+
+<section class="slide">
+        <pre class="">
+            <code>#el {</code>
+            <code>  background-color: red;</code>
+            <code>  animation: anim infinite 3s;</code>
+            <code>}</code>
+            <code>@keyframes anim {</code>
+            <code>  50% { background-color: blue; }</code>
+            <code>}</code>
+        </pre>
+
+    <div id="el1" style="position: absolute; top: 90px; right: 200px"></div>
+
+    <style>
+        #el1 {
+            height: 360px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        #el1 {
+            background: red;
+            animation: anim infinite 3s;
+        }
+        @keyframes anim {
+            50% {
+                background-color: blue;
+            }
+        }
+    </style>
+</section>
+
+<section class="slide">
+        <pre class="">
+            <code>#el {</code>
+            <code>  --color-stop: red;</code>
+            <code>  background: var(--color-stop);</code>
+            <code>  animation: anim infinite 3s;</code>
+            <code>}</code>
+            <code>@keyframes anim {</code>
+            <code>  50% { --color-stop: blue; }</code>
+            <code>}</code>
+        </pre>
+
+    <div id="el2" style="position: absolute; top: 90px; right: 200px"></div>
+
+    <style>
+        #el2 {
+            height: 360px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        #el2 {
+            --color-sto: red;
+            background: var(--color-sto);
+            animation: anim infinite 3s;
+        }
+        @keyframes anim {
+            50% {
+                --color-sto: blue;
+            }
+        }
+    </style>
+</section>
+
+<section class="slide">
+    <h2>Почему?</h2>
+    <p class="next">Потому что изначально css переменные не типизированы</p>
+    <pre class="next">
+            <code>div {</code>
+            <code>  --name: red;</code>
+            <code class="next">  --name: 11px;</code>
+            <div class="next">
+                <code >  --name: calc(14deg * 3);</code>
+                <code>}</code>
+            </div>
+        </pre>
+</section>
+
+<section class="slide">
+        <pre class="">
+            <code>#el {</code>
+            <code>  --color-stop: red;</code>
+            <code>  margin: 50px;</code>
+            <code>  animation: anim infinite 3s;</code>
+            <code>}</code>
+            <code>@keyframes anim {</code>
+            <code>  50% { --color-stop: 10px;</code>
+            <code>       margin: var(--color-stop); }</code>
+            <code>}</code>
+        </pre>
+</section>
+
+<section class="slide">
+    <h2>Почему?</h2>
+    <p class="">Браузер не знает, как построить переход от одного значения к другому</p>
+    <pre class="next">
+            <code>red  =>  ???  =>  blue</code>
+            <code class="next">red  =>  ???  =>  10px</code>
+        </pre>
+</section>
+
+<section class="slide">
+    <h2>Типизация переменной</h2>
+    <pre>
+            <code><span style="color:#9876aa;font-weight:bold;font-style:italic;">CSS</span>.registerProperty({</code>
+            <code><span style="color:#9876aa;">  name</span>: <span style="color:#6a8759;">'--color-stop'</span><span style="color:#cc7832;">,</span></code>
+            <code><span style="color:#cc7832;">  </span><span style="color:#9876aa;">syntax</span>: <span style="color:#6a8759;">'&lt;color&gt;'</span><span style="color:#cc7832;">,</span></code>
+            <code><span style="color:#cc7832;">  </span><span style="color:#9876aa;">inherits</span>: <span style="color:#cc7832;">false,</span></code>
+            <code><span style="color:#cc7832;">  </span><span style="color:#9876aa;">initialValue</span>: <span style="color:#6a8759;">'transparent'</span></code>
+            <code>})</code>
+        </pre>
+</section>
+
+<section class="slide">
+        <pre class="">
+            <code>#el {</code>
+            <code>  --color-stop: red;</code>
+            <code>  background: var(--color-stop);</code>
+            <code>  animation: anim infinite 3s;</code>
+            <code>}</code>
+            <code>@keyframes anim {</code>
+            <code>  50% { --color-stop: blue; }</code>
+            <code>}</code>
+        </pre>
+
+    <div id="el" style="position: absolute; top: 90px; right: 200px"></div>
+
+    <style>
+        #el {
+            height: 360px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        #el {
+            --color-stop: red;
+            background: var(--color-stop);
+            animation: anim infinite 3s;
+        }
+        @keyframes anim {
+            50% {
+                --color-stop: blue;
+            }
+        }
+    </style>
+
+    <script>
+      CSS.registerProperty({
+        name: '--color-stop',
+        syntax: '<color>',
+        inherits: false,
+        initialValue: 'transparent'
+      })
+    </script>
+</section>
+
+<section class="slide">
+    <h2>Поэтому типизируем</h2>
+    <pre><code>Object.keys(palette).forEach((colorName) => {</code>
+        <code>  js += `    CSS.registerProperty({</code>
+        <code>    name: '--${colorName}',</code>
+        <code>    syntax: '&lt;color>',</code>
+        <code>    inherits: true,</code>
+        <code>    initialValue: '${palette[colorName]}',</code>
+        <code>  });\n`</code>
+        <code>});</code>
+    </code></pre>
+</section>
+
+<section class="slide">
+    <h2>Поэтому типизируем</h2>
+    <pre><code>export function registerColorVars() {</code>
+        <code>  if ('CSS' in window && CSS.registerProperty) {</code>
+        <code>    CSS.registerProperty({ /* --azure */})</code>
+        <code>    CSS.registerProperty({ /* --black */})</code>
+        <code>    ...</code>
+        <code>  }</code>
+        <code>}</code></pre>
+</section>
+
+<section class="slide">
+    <h2>Теперь можем делать анимации</h2>
+    <pre class="">
+    <code>#el {</code>
+    <code>  animation: anim infinite 3s;</code>
+    <code>}</code>
+    <code>@keyframes anim {</code>
+    <code>  0% { --color-stop: var(--blue_400); }</code>
+    <code>  50% { --color-stop: var(--red_500); }</code>
+    <code>  100% { --color-stop: var(--blue_400); }</code>
+    <code>}</code>
+    </pre>
+
+    <div id="el6" style="position: absolute; top: 150px; right: 80px"></div>
+
+    <style>
+        #el6 {
+            height: 360px;
+            width: 200px;
+            border-radius: 10px;
+        }
+        #el6 {
+            --color-stop: red;
+            background: var(--color-stop);
+            animation: anim infinite 3s;
+        }
+        @keyframes anim {
+            50% {
+                --color-stop: blue;
+            }
+        }
+    </style>
+</section>
+
+<section class="slide">
+    <h2>В будущем</h2>
+    <p>Планируем завести еще палитры:</p>
+    <ul>
+        <li>типографику</li>
+        <li>скругления</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>В будущем</h2>
+    <p>Планируем завести еще палитры:</p>
+    <div class="columns two">
+        <ul>
+            <li><b>типографику</b></li>
+            <li>скругления</li>
+        </ul>
+        <pre class="small_code"><code>"title1_semibold": {</code>
+            <code>  "font_size": 24,</code>
+            <code>  "line_height": 28,</code>
+            <code>  "font_weight": 600,</code>
+            <code>  "font_name": "system"</code>
+            <code>},</code>
+            <code>.....</code></pre>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>В будущем</h2>
+    <p>Планируем завести еще палитры:</p>
+    <div class="columns two">
+        <ul>
+            <li>типографику</li>
+            <li><b>скругления</b></li>
+        </ul>
+        <pre class="small_code"><code>{</code>
+            <code>  "S": 4,</code>
+            <code>  "M": 6,</code>
+            <code>  "L": 8,</code>
+            <code>  "XL": 12</code>
+            <code>}</code></pre>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Итого</h2>
+    <ul>
+        <li>Единая точка правды для всех платформ</li>
+        <li>Легкая поддержка</li>
+        <li>Повышенный контроль дизайнеров</li>
+        <li>Хорошоее версионирвание</li>
+        <li>Легкое управление видом интерфейса</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>София Валитова из <a href="https://vk.com">ВКонтакте</a></h2>
+    <ul>
+        <li><a>ariarzer@gmail.com</a></li>
+        <li>Twitter – <a href="https://twitter.com/ariarzer">@ariarzer</a></li>
+        <li>ВКонтакте – <a href="https://vk.com/ariarzer">@ariarzer</a></li>
+        <li>Telegram – <a href="https://twitter.com/ariarzer">@ariarzer</a></li>
+    </ul>
+
+    <p>Презентация сделана с помощью <a href="https://shwr.me/">Shower</a></p>
+</section>
+
+<footer class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="./syntax.js"></script>
+
+<script src="node_modules/shower-core/shower.min.js"></script>
+</body>
+</html>
+
+
